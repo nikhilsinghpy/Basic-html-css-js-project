@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/cal.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="heading">
+            <h1>---Simple interest Calculator---</h1>
+            <p>---Simple interest CALCULATOR</p>
+        </div>
+        <div class="container">
+            <div class="input-container">
+                <h3>select currency:</h3>
+                <h3>Principal Amount:</h3>
+                <h3>Annual Interest Rate:</h3>
+                <h3>period:</h3>
+                <h3>Period Type</h3>
+            </div>
+            <div class="input-container">
+                <select id="currency">
+                    <option id="none">Select currency</option>
+                    <option  id="doller" value="doller">Doller($)</option>
+                    <option  id="inr" value="inr">INR(&#8377;)</option>
+                </select>
+                <input type="text" name="PrincipalAmount" id="PrincipalAmount">
+                <input type="text" name="AnnualInterestrate" id="AnnualInterestrate">
+                <input type="text" name="period" id="period">
+                <select id="periodtype">
+                    <option  id="none" value="none">Select Month</option>
+                    <option  id="month" value="month">Month</option>
+                    <option  id="year" value="year">Year</option>
+                </select>
+               
+            </div>
+        </div>
+        <div class="output">
+            <div class="res">
+                <h4>Interest Amount</h4>
+                <p id="interestamt"></p>
+            </div>
+            <div class="res">
+                <h4>Total Amount</h4>
+                <p id="totalamount"></p>
+            </div>
+        </div>
+        
+        <div class="button">
+            <button onclick="calculete()">CALCULATE</button>
+            <button onclick="clear()">CLEAR</button>
+        </div>
+    </div>
+    <script src="Javascripts/cal.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    #calculator {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 48%;
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+    <br>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="setOperator('+')">+</button>
+    <br>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="setOperator('-')">-</button>
+    <br>
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="setOperator('*')">*</button>
+    <br>
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="setOperator('/')">/</button>
+    <br>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let currentInput = '';
+    let currentOperator = '';
+    let resultDisplay = document.getElementById('result');
+    let display = document.getElementById('display');
+
+    function appendNumber(number) {
+      currentInput += number;
+      display.value = currentInput;
+    }
+
+    function setOperator(operator) {
+      if (currentInput !== '') {
+        currentOperator = operator;
+        currentInput += ' ' + operator + ' ';
+        display.value = currentInput;
+      }
+    }
+
+    function clearDisplay() {
+      currentInput = '';
+      currentOperator = '';
+      display.value = '';
+      resultDisplay.innerHTML = '';
+    }
+
+    function calculate() {
+      if (currentInput !== '') {
+        try {
+          const result = eval(currentInput);
+          resultDisplay.innerHTML = '= ' + result;
+        } catch (error) {
+          resultDisplay.innerHTML = 'Error';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

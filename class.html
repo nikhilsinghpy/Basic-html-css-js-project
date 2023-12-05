@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Selection</title>
+</head>
+<body>
+    <label for="countrySelect">Select a country:</label>
+    <select id="countrySelect" onchange="updateGST()">
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+    </select>
+
+    <input type="text" id="gstrate" readonly>
+
+    <br>
+
+    <label for="userValue">Enter a value:</label>
+    <input type="text" id="userValue" placeholder="Enter a value">
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <p id="result"></p>
+
+    <script>
+        function updateGST() {
+            var countrySelect = document.getElementById("countrySelect");
+            var gstdisplay = document.getElementById("gstrate");
+            var selectedCountry = countrySelect.value;
+
+            if (selectedCountry === "India") {
+                gstdisplay.value = "15";
+            } else if (selectedCountry === "Australia") {
+                gstdisplay.value = "18";
+            } else {
+                gstdisplay.value = ""; // Clear the input if none selected
+            }
+        }
+
+        function calculateTotal() {
+            var gstdisplay = parseFloat(document.getElementById("gstrate").value);
+            var userValue = parseFloat(document.getElementById("userValue").value);
+            var resultElement = document.getElementById("result");
+
+            if (!isNaN(gstdisplay) && !isNaN(userValue)) {
+                var total = gstdisplay + userValue;
+                resultElement.textContent = "Total: " + total;
+            } else {
+                resultElement.textContent = "Please enter a valid number.";
+            }
+        }
+    </script>
+</body>
+</html>

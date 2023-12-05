@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: rgb(9,120,121);
+background: linear-gradient(90deg, rgba(9,120,121,0.7371323529411764) 35%, rgba(0,212,255,0.5578606442577031) 100%);
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    width: 100%;
+    height: auto;
+    
+}
+.heading{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    line-height: 3rem;
+}
+.container{
+    width: 60%;
+    min-height: 300px;
+    background: radial-gradient(circle, rgba(36,34,195,1) 0%, rgba(45,196,253,1) 100%);
+    padding: 2rem;
+    border-radius: .5rem;
+    border-bottom-left-radius:0rem;
+    border-bottom-right-radius: 0rem;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.input-container h3 {
+    margin-top: 5%;
+    text-transform: capitalize;
+    font-weight: 200;
+    font-family:'Times New Roman', Times, serif;
+}
+.input-container  input,
+select{
+    margin-top: 5%;
+    height: 30px;
+    outline: none;
+    border-radius: .3rem;
+    outline: none;
+    border: none;
+}
+button{
+    padding: 1rem;
+    width: 200px;
+    margin-top: 5%;
+    letter-spacing: 3px;
+    background-color:  #e69900;
+    color: white;
+    outline: none;
+    border: 1px solid  #e69900;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+button:hover{
+    background-color: white;
+    color:  #e69900;
+   
+
+}
+.output{
+    background: radial-gradient(circle, rgba(36,34,195,1) 0%, rgba(45,196,253,1) 100%);
+    width: 60%;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    font-size: 24px;
+}
+.output .res p {
+   background-color: white;
+   width: 100%;
+   color:black;
+   text-align: center;
+
+}

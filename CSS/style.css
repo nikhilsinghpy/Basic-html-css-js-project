@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gainsboro;
+    font-family: sans-serif;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    width: 100%;
+    height: auto;
+    
+}
+.heading{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    line-height: 3rem;
+}
+.container{
+    width: 60%;
+    min-height: 300px;
+    background: rgb(36,34,195);
+    background: radial-gradient(circle, rgba(36,34,195,1) 0%, rgba(45,196,253,1) 100%);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.container select{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 80%;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.container select option{
+    color: black;
+}
+.container input{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    width: 80%;
+    height: 30px;
+    margin-top: 4%;
+    color: white;
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: .3rem;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+button {
+    background-color: blueviolet;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+    margin-top: 2%;
+    outline: none;
+    border: 1px solid blueviolet;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+  }
+.output{
+    background-color: burlywood;
+    color: black;
+    margin-top: 5%;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+.output ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    text-transform: capitalize;
+    text-align: center;
+
+}

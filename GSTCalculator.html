@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="heading">
+            <h1>GST TAX CALCULATOR</h1>
+            <p>---goods and services tax [GST] Calculator---</p>
+        </div>
+        <div class="container">
+            <div class="user-ibput">
+                <div class="inputdata">
+                    <label for="Country">Country:</label>
+                    <select id="countrySelect" onchange="updateGST()">
+                        <option  id="null">Select Country</option>
+                        <option  id="India">India</option>
+                        <option  id="Australia">Australia</option>
+                        <option  id="USA">USA</option>
+                        <option  id="Japan">Japan</option>
+                    </select>
+                </div>
+
+                <!--user amount  -->
+                <label for="Amount">Amount:</label>
+                <input type="number" name="Amount" id="userValue">
+
+
+                <!-- GST rate -->
+                <label for="GST Rate">Gstrate:</label>
+                <input type="text" id="gstvalue" readonly>
+
+                
+            </div>
+           <div class="button">
+                <button onclick="addgst()">ADD GST</button>
+                <button onclick="removegst()">Remove GST</button>
+           </div>
+            <div class="output">
+                <ul>
+                    <li>net Amount</li>
+                    <li>GST Rate</li>
+                    <li>GST Amount</li>
+                    <li>Gross Amount</li>
+                </ul>
+                <ul style="background-color: white; margin-top: 2%; margin-left: -2%; padding: 1rem;">
+                    <li id="nwtamt">output1</li>
+                    <li id="gstrate">output1</li>
+                    <li id="gstamt">output1</li>
+                    <li id="amt">output1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="Javascripts/scrips.js"></script>
+</body>
+</html>

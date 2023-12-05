@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Calculator</title>
+    <link rel="stylesheet" href="CSS/stylemobile.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Calculator</h1>
+        <div class="container">
+            <div class="output-input">
+                <input type="text" name="display" id="outputinput" readonly>
+            </div>
+            <div class="button">
+                <button onclick="outputinput.value = ''">C</button>
+                <button onclick="outputinput.value += '%'">%</button>
+                <button onclick="outputinput.value = outputinput.value.toString().slice(0,-1);">&#8592;</button>
+                <button onclick="outputinput.value += '/'">/</button>
+
+                <button onclick="outputinput.value += '7'">7</button>
+                <button onclick="outputinput.value += '8'">8</button>
+                <button onclick="outputinput.value += '9'">9</button>
+                <button onclick="outputinput.value += '*'">x</button>
+
+                <button onclick="outputinput.value += '4'">4</button>
+                <button onclick="outputinput.value += '5'">5</button>
+                <button onclick="outputinput.value += '6'">6</button>
+                <button onclick="outputinput.value += '-'">-</button>
+
+                <button onclick="outputinput.value += '1'">1</button>
+                <button onclick="outputinput.value += '2'">2</button>
+                <button onclick="outputinput.value += '3'">3</button>
+                <button onclick="outputinput.value += '+'">+</button>
+
+                <button onclick="outputinput.value += '00'">00</button>
+                <button onclick="outputinput.value += '0'">0</button>
+                <button onclick="outputinput.value += '.'">.</button>
+                <button onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="Javascripts/scriptsmobile.js"></script>
+</body>
+</html>
